@@ -12,6 +12,7 @@ package swimming;
 public abstract class Swimmer extends Person {
     public static int NumofSwimmers;
     
+    
     public  Swimmer(String name) {
         super(name);
         //NumofSwimmers++;
@@ -28,16 +29,23 @@ public abstract class Swimmer extends Person {
         NumofSwimmers++;
         NumofPeople++;
     }
-    public void butterflystroke(){
+   
+    //swimmingMoves
+    public void breath(){
         
     }
-    public void backstroke(){
+    //butterfly
+    public void pull(){
         
     }
-    public void freestyle(){
+    public void push(){
         
     }
-    public void breastroke(){
+    public void recover(){
         
     }
+    //freestyle
+    public void kick(){
+    }
+    
 }

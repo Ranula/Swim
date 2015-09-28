@@ -9,7 +9,7 @@ package swimming;
  *
  * @author User
  */
-public class Person   {
+public abstract class Person   {
     public String Name;
     public static int NumofPeople;
         

@@ -22,7 +22,8 @@ public class Main {
         Judge j1= new Judge("Sameera");
         Spectator sp1 = new Spectator("Kaushalya");
         SupStaff staff1= new SupStaff("Sajini");
-        System.out.println(SupStaff.NumofSupStaff);
+        System.out.println(Swimmer.NumofPeople);
+        
         
     }
     

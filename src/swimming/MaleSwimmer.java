@@ -17,5 +17,20 @@ public class MaleSwimmer extends Swimmer {
         incrementSwimmers();
         
     }
-    
+    @Override
+    public void butterflystroke(){
+        
+    }
+    @Override
+    public void backstroke(){
+        
+    }
+    @Override
+    public void freestyle(){
+        
+    }
+    @Override
+    public void breastroke(){
+        
+    }
 }

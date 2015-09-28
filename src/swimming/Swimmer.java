@@ -9,7 +9,7 @@ package swimming;
  *
  * @author User
  */
-public class Swimmer extends Person {
+public abstract class Swimmer extends Person {
     public static int NumofSwimmers;
     
     public  Swimmer(String name) {
@@ -27,5 +27,17 @@ public class Swimmer extends Person {
     public static void incrementSwimmers(){
         NumofSwimmers++;
         NumofPeople++;
+    }
+    public void butterflystroke(){
+        
+    }
+    public void backstroke(){
+        
+    }
+    public void freestyle(){
+        
+    }
+    public void breastroke(){
+        
     }
 }

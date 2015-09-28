@@ -10,10 +10,25 @@ package swimming;
  * @author User
  */
 public class FemaleSwimmer extends Swimmer {
-    private String Suitecolor="Red";
+    private final String Suitecolor="Red";
     public FemaleSwimmer(String name) {
         super(name);
         incrementSwimmers();
     }
-    
+    @Override
+    public void butterflystroke(){
+        
+    }
+    @Override
+    public void backstroke(){
+        
+    }
+    @Override
+    public void freestyle(){
+        
+    }
+    @Override
+    public void breastroke(){
+        
+    }
 }

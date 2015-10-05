@@ -15,22 +15,46 @@ public class FemaleSwimmer extends Swimmer implements Strokes {
         super(name);
         incrementSwimmers();
     }
+    
+    //defining swimming methods for femaleswimmers
     @Override
     public void butterflystroke(){
         while( kick()){
-            
+            breath();
+            pull();
+            push();
+            breath();
+            recover();
         }
     }
     @Override
     public void backstroke(){
+        while(kick()){
+            leftarmbakward();
+            breath();
+            rightarmbakward();
+            breath();
+        }
         
     }
     @Override
     public void freestyle(){
+        while(kick()){
+            leftarmforward();
+            breath();
+            rightarmforward();
+            breath();
+        }
         
     }
     @Override
     public void breastroke(){
+        while(kick()){
+            breath();
+            glide();
+            outsweep();
+            insweep();
+        }
         
     }
 }

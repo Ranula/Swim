@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-/**
+package swimming;/**
  *
  * @author User
  */
 public abstract class SwimmingCompetition {
+    
     
     //public static ArrayList<Object> objects = new ArrayList<Object>();
     
@@ -30,6 +26,7 @@ public abstract class SwimmingCompetition {
         //objects.add(staff1);
         System.out.println(Swimmer.NumofPeople);
         System.out.println(Person.People.toString());
-    }
+        
+    } 
     
 }

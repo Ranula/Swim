@@ -9,62 +9,53 @@ package swimming;
  *
  * @author User
  */
-public abstract class Swimmer extends Person {
+public abstract class Swimmer extends Person implements Strokes {
     public static int NumofSwimmers;
-    
+    //private String stroke;
     
     public  Swimmer(String name) {
         super(name);
         People.add(this);
-        //NumofSwimmers++;
-        
     }
-    public boolean startswim(){
-        
-        return false;
-        
-    }
-    public void swim(){
-        
-    }
+  
     public static void incrementSwimmers(){
         NumofSwimmers++;
         NumofPeople++;
         
     }
-   
+    
     //swimmingMoves
-    public void breath(){
+    protected void breath(){
         
     }
-    public boolean kick(){
+    protected boolean kick(){
         return false;
     }
     //butterfly
-    public void pull(){
+    protected void pull(){
         
     }
-    public void push(){
+   protected void push(){
         
     }
-    public void recover(){
+    protected void recover(){
         
     }
     //freestyle & backstroke
     
-    public void rightarmforward(){
+    protected void rightarmforward(){
     }
-    public void moveleftarmforward(){
+    protected void leftarmforward(){
     } 
-     public void rightarmbakward(){
+     protected void rightarmbakward(){
     }
-    public void moveleftarmbakward(){
+    protected void leftarmbakward(){
     }    
     //breaststroke
-    public void glide(){
+    protected void glide(){
     }
-    public void outsweep(){
+    protected void outsweep(){
     } 
-    public void insweep(){
+    protected void insweep(){
     }
 }

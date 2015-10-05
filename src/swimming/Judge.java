@@ -11,6 +11,7 @@ package swimming;
  */
 public class Judge extends Person{
     public static int NumofJudges;
+    public static boolean whistle;
     public Judge(String name) {
         super(name);
         incrementjudges();
@@ -19,5 +20,11 @@ public class Judge extends Person{
     public static void incrementjudges(){
         NumofJudges++;
         NumofPeople++;
+    }
+    public void blowwhistle(){
+       whistle=setwhistle();
+    }
+    private boolean setwhistle(){
+        return true;
     }
 }

@@ -9,7 +9,7 @@ package swimming;
  *
  * @author User
  */
-public class MaleSwimmer extends Swimmer implements Strokes {
+public class MaleSwimmer extends Swimmer  {
     private final String suitecolor ="Blue";
 
     public MaleSwimmer(String name) {
@@ -17,20 +17,45 @@ public class MaleSwimmer extends Swimmer implements Strokes {
         incrementSwimmers();
         
     }
+    
+    //defining swimming methods for maleswimmers
+    
     @Override
     public void butterflystroke(){
+        while (kick()){
+            pull();
+            breath();
+            push();
+            recover();
+        }
         
     }
     @Override
     public void backstroke(){
-        
+        while(kick()){
+            breath();
+            leftarmbakward();
+            rightarmbakward();
+            
+        }
     }
     @Override
     public void freestyle(){
+        while(kick()){
+            breath();
+            leftarmforward();
+            rightarmforward();
+            
+        }
         
     }
     @Override
     public void breastroke(){
-        
+        while(kick()){
+            glide();
+            outsweep();
+            insweep();
+            breath();
+        }
     }
 }

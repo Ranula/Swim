@@ -15,10 +15,12 @@ public abstract class Swimmer extends Person {
     
     public  Swimmer(String name) {
         super(name);
+        People.add(this);
         //NumofSwimmers++;
         
     }
     public boolean startswim(){
+        
         return false;
         
     }
@@ -28,11 +30,15 @@ public abstract class Swimmer extends Person {
     public static void incrementSwimmers(){
         NumofSwimmers++;
         NumofPeople++;
+        
     }
    
     //swimmingMoves
     public void breath(){
         
+    }
+    public boolean kick(){
+        return false;
     }
     //butterfly
     public void pull(){
@@ -44,8 +50,21 @@ public abstract class Swimmer extends Person {
     public void recover(){
         
     }
-    //freestyle
-    public void kick(){
-    }
+    //freestyle & backstroke
     
+    public void rightarmforward(){
+    }
+    public void moveleftarmforward(){
+    } 
+     public void rightarmbakward(){
+    }
+    public void moveleftarmbakward(){
+    }    
+    //breaststroke
+    public void glide(){
+    }
+    public void outsweep(){
+    } 
+    public void insweep(){
+    }
 }

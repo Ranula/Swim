@@ -14,6 +14,7 @@ public class Judge extends Person{
     public Judge(String name) {
         super(name);
         incrementjudges();
+        People.add(this);
     }
     public static void incrementjudges(){
         NumofJudges++;

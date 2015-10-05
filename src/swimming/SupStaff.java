@@ -14,6 +14,7 @@ public class SupStaff extends Person {
     public SupStaff(String name) {
         super(name);
         incrementSupStaff();
+        People.add(this);
     }
     public static void incrementSupStaff(){
         NumofSupStaff++;

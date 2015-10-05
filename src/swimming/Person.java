@@ -5,17 +5,24 @@
  */
 package swimming;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
 public abstract class Person   {
-    public String Name;
+    private String Name;
     public static int NumofPeople;
+    public static ArrayList<Object> People = new ArrayList<Object>();
         
     public Person(String name){
         this.Name=name;
         
+        
+    }
+    public String getName(){
+        return Name;
     }
     //public static void incrementPeople(){
        // NumofPeople++;

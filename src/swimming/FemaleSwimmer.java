@@ -17,7 +17,9 @@ public class FemaleSwimmer extends Swimmer implements Strokes {
     }
     @Override
     public void butterflystroke(){
-        
+        while( kick()){
+            
+        }
     }
     @Override
     public void backstroke(){

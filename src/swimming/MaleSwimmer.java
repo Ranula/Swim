@@ -14,8 +14,7 @@ public class MaleSwimmer extends Swimmer implements Strokes  {
 
     public MaleSwimmer(String name) {
         super(name);
-        incrementSwimmers();
-        
+        //incrementSwimmers();
     }
     
     //defining swimming methods for maleswimmers

@@ -13,11 +13,6 @@ public class Spectator extends Person {
 
     public Spectator(String name) {
         super(name);
-        incrementSpectators();
-        People.add(this);
     }
-    public static void incrementSpectators(){
-        NumofSpectators++;
-        NumofPeople++;
-    }
+   
 }

@@ -13,7 +13,7 @@ public class FemaleSwimmer extends Swimmer implements Strokes {
     private final String Suitecolor="Red";
     public FemaleSwimmer(String name) {
         super(name);
-        incrementSwimmers();
+        //incrementSwimmers();
     }
     
     //defining swimming methods for femaleswimmers

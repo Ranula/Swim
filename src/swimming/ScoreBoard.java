@@ -5,21 +5,10 @@
  */
 package swimming;
 
-
-
 /**
  *
  * @author User
  */
-public abstract class Person   {
-    private final String Name;
-    
-    public Person(String name){
-        this.Name=name;
-    }
-    
-    public String getName(){
-        return Name;
-    }
+public class ScoreBoard {
     
 }

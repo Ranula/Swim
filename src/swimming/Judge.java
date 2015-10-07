@@ -10,17 +10,11 @@ package swimming;
  * @author User
  */
 public class Judge extends Person{
-    public static int NumofJudges;
-    public static boolean whistle;
+  public static boolean whistle;
     public Judge(String name) {
         super(name);
-        incrementjudges();
-        People.add(this);
     }
-    public static void incrementjudges(){
-        NumofJudges++;
-        NumofPeople++;
-    }
+   
     public void blowwhistle(){
        whistle=setwhistle();
     }

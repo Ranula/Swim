@@ -5,21 +5,20 @@
  */
 package swimming;
 
-
-
 /**
  *
  * @author User
  */
-public abstract class Person   {
-    private final String Name;
+public class SwimLane {
+    private TouchPad t1;
+    private int lanenum;
     
-    public Person(String name){
-        this.Name=name;
+    public void setLaneNo(int num){
+        lanenum=num;
     }
     
-    public String getName(){
-        return Name;
+    public int getLaneNo(){
+        return lanenum;
     }
     
 }

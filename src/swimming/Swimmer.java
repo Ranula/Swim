@@ -10,20 +10,12 @@ package swimming;
  * @author User
  */
 public abstract class Swimmer extends Person  {
-    public static int NumofSwimmers;
-    //private String stroke;
+   // public static int NumofSwimmers;
     
     public  Swimmer(String name) {
         super(name);
-        People.add(this);
     }
   
-    public static void incrementSwimmers(){
-        NumofSwimmers++;
-        NumofPeople++;
-        
-    }
-    
     //swimmingMoves
     protected void breath(){
         

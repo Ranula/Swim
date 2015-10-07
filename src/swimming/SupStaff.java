@@ -13,12 +13,6 @@ public class SupStaff extends Person {
     public static int NumofSupStaff;
     public SupStaff(String name) {
         super(name);
-        incrementSupStaff();
-        People.add(this);
     }
-    public static void incrementSupStaff(){
-        NumofSupStaff++;
-        NumofPeople++;
-    }
-    
+   
 }

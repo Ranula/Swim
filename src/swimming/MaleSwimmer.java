@@ -9,7 +9,7 @@ package swimming;
  *
  * @author User
  */
-public class MaleSwimmer extends Swimmer  {
+public class MaleSwimmer extends Swimmer implements Strokes  {
     private final String suitecolor ="Blue";
 
     public MaleSwimmer(String name) {

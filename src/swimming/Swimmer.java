@@ -9,7 +9,7 @@ package swimming;
  *
  * @author User
  */
-public abstract class Swimmer extends Person implements Strokes {
+public abstract class Swimmer extends Person  {
     public static int NumofSwimmers;
     //private String stroke;
     
@@ -35,7 +35,7 @@ public abstract class Swimmer extends Person implements Strokes {
     protected void pull(){
         
     }
-   protected void push(){
+    protected void push(){
         
     }
     protected void recover(){
@@ -47,7 +47,7 @@ public abstract class Swimmer extends Person implements Strokes {
     }
     protected void leftarmforward(){
     } 
-     protected void rightarmbakward(){
+    protected void rightarmbakward(){
     }
     protected void leftarmbakward(){
     }    

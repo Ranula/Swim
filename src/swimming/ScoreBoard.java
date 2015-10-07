@@ -10,5 +10,8 @@ package swimming;
  * @author User
  */
 public class ScoreBoard {
-    
+    public boolean HasScoreB=false;
+    public void create(){
+        HasScoreB=true;
+    }
 }

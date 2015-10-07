@@ -10,5 +10,14 @@ package swimming;
  * @author User
  */
 public class TouchPad {
-    
+    private boolean touch = false;
+    public void touch(){
+        touch=true;
+    }
+    public boolean hastouched(){
+        return touch;
+    }
+    public void sendsignal(){
+        
+    }
 }

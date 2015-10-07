@@ -12,10 +12,13 @@ import java.util.ArrayList;
  * @author User
  */
 public class SwimmingCompetition {
-    SwimmingPool sp;
+    SwimmingPool pool;
+    ScoreBoard sb;
     public SwimmingCompetition(){
-        sp= new SwimmingPool();
-        sp.create();
+        pool= new SwimmingPool();
+        pool.create();
+        sb= new ScoreBoard();
+        sb.create();
     }
     //Arraylist for all human objects
     public static ArrayList<Object> People = new ArrayList<>();
@@ -58,8 +61,7 @@ public class SwimmingCompetition {
     public void Addlanes(int i){
         
         for(int x=0;x<i;x++){
-            sp.addlane(x+1);
-            
+            pool.addlane(x+1);
         }
     }
        

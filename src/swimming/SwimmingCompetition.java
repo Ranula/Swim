@@ -64,6 +64,8 @@ public class SwimmingCompetition {
             pool.addlane(x+1);
         }
     }
+    
+    
        
     //This will return NumofPeople
     public int NumofPeople(){

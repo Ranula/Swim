@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package swimming;
-
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
 public class SwimLane {
     private TouchPad t1;
@@ -16,7 +15,6 @@ public class SwimLane {
     public void setLaneNo(int num){
         lanenum=num;
     }
-    
     public int getLaneNo(){
         return lanenum;
     }

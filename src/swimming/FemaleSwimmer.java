@@ -7,10 +7,10 @@ package swimming;
 
 /**
  *
- * @author User
+ * @authorRanulLiyadipita
  */
-public class FemaleSwimmer extends Swimmer implements Strokes {
-    private final String Suitecolor="Red";
+public class FemaleSwimmer extends Swimmer{
+    public final String Suitecolor="Red";
     public FemaleSwimmer(String name) {
         super(name);
         //incrementSwimmers();

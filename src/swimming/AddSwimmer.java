@@ -9,13 +9,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
 public class AddSwimmer extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AddSwimmer
-     */
+    
     public AddSwimmer() {
         initComponents();
     }

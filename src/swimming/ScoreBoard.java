@@ -4,14 +4,10 @@
  * and open the template in the editor.
  */
 package swimming;
-
 /**
  *
- * @author User
+ * @authorRanulaLiyadipita
  */
 public class ScoreBoard {
-    public boolean HasScoreB=false;
-    public void create(){
-        HasScoreB=true;
-    }
+    
 }

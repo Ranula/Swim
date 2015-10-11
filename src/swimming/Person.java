@@ -4,12 +4,9 @@
  * and open the template in the editor.
  */
 package swimming;
-
-
-
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
 public abstract class Person   {
     private final String Name;
@@ -17,7 +14,7 @@ public abstract class Person   {
     public Person(String name){
         this.Name=name;
     }
-    
+    //this will return the name of the person
     public String getName(){
         return Name;
     }

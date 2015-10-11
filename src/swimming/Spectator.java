@@ -6,11 +6,9 @@
 package swimming;
 /**
  *
- * @author User
+ * @authorRanulaLiyadipita
  */
 public class Spectator extends Person {
-    public static int NumofSpectators;
-
     public Spectator(String name) {
         super(name);
     }

@@ -7,7 +7,7 @@ package swimming;
 
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
 public class Judge extends Person{
   public static boolean whistle;

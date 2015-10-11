@@ -4,13 +4,11 @@
  * and open the template in the editor.
  */
 package swimming;
-
 /**
  *
- * @author User
+ * @authorRanulaLiyadipita
  */
 public class SupStaff extends Person {
-    public static int NumofSupStaff;
     public SupStaff(String name) {
         super(name);
     }

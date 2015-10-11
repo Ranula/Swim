@@ -7,7 +7,7 @@ package swimming;
 
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
 public class TouchPad {
     private boolean touch = false;

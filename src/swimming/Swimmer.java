@@ -7,7 +7,7 @@ package swimming;
 
 /**
  *
- * @author User
+ * @authorRanulaLiyadipita
  */
 public abstract class Swimmer extends Person  {
    // public static int NumofSwimmers;
@@ -15,25 +15,29 @@ public abstract class Swimmer extends Person  {
     public  Swimmer(String name) {
         super(name);
     }
-  
-    //swimmingMoves
+    //strokes
+    public abstract void butterflystroke();
+    public abstract void backstroke();
+    public abstract void freestyle();
+    public abstract void breastroke();
+    
+//swimmingMoves
+    
     protected void breath(){
-        
     }
     protected boolean kick(){
-        return false;
+        return true;
     }
-    //butterfly
+    
+ //butterflystroke moves
     protected void pull(){
-        
     }
     protected void push(){
-        
     }
     protected void recover(){
-        
     }
-    //freestyle & backstroke
+    
+//freestyle & backstroke moves
     
     protected void rightarmforward(){
     }
@@ -43,7 +47,8 @@ public abstract class Swimmer extends Person  {
     }
     protected void leftarmbakward(){
     }    
-    //breaststroke
+    
+//breaststroke moves
     protected void glide(){
     }
     protected void outsweep(){

@@ -9,19 +9,20 @@ import java.util.ArrayList;
 
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
 public class SwimmingPool {
-    public int numoflanes=0;
-    public boolean HasPool=false;
+    private int numoflanes=0;
+    //arraylist to keep track of lanes
     public static ArrayList<SwimLane> Lanes = new ArrayList<>();
     
-    public void create(){
-        HasPool=true;
-    }
     public void addlane(int y){
         SwimLane l = new SwimLane();
         Lanes.add(l);
         l.setLaneNo(y);
+    }
+    public int numoflanes(){
+        return (Lanes.toArray().length);
+        
     }
 }

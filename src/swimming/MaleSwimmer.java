@@ -7,17 +7,15 @@ package swimming;
 
 /**
  *
- * @author User
+ * @author RanulaLiyadipita
  */
-public class MaleSwimmer extends Swimmer implements Strokes  {
-    private final String suitecolor ="Blue";
+public class MaleSwimmer extends Swimmer{
+    public final String suitecolor ="Blue";
 
     public MaleSwimmer(String name) {
         super(name);
-        //incrementSwimmers();
     }
-    
-    //defining swimming methods for maleswimmers
+    //defining swimming methods for male swimmers
     
     @Override
     public void butterflystroke(){

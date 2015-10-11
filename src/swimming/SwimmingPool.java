@@ -12,14 +12,15 @@ import java.util.ArrayList;
  * @author RanulaLiyadipita
  */
 public class SwimmingPool {
+    
     private int numoflanes=0;
     //arraylist to keep track of lanes
     public static ArrayList<SwimLane> Lanes = new ArrayList<>();
     
     public void addlane(int y){
         SwimLane l = new SwimLane();
-        Lanes.add(l);
         l.setLaneNo(y);
+        Lanes.add(l);
     }
     public int numoflanes(){
         return (Lanes.toArray().length);

@@ -5,12 +5,15 @@
  */
 package swimming;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author RanulaLiyadipita
  */
 public class Judge extends Person{
   public static boolean whistle;
+  public static ArrayList<Judge> Judges = new ArrayList<>();
     public Judge(String name) {
         super(name);
     }

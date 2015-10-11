@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package swimming;
+
+import java.util.ArrayList;
+
 /**
  *
  * @authorRanulaLiyadipita
  */
 public class SupStaff extends Person {
+    public static ArrayList<SupStaff> SuportStaff = new ArrayList<>();
     public SupStaff(String name) {
         super(name);
     }

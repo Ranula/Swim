@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package swimming;
+
+import java.util.ArrayList;
+
 /**
  *
  * @authorRanulaLiyadipita
  */
 public class Spectator extends Person {
+    public static ArrayList<Spectator> Spectators = new ArrayList<>();
     public Spectator(String name) {
         super(name);
     }

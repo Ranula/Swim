@@ -15,6 +15,7 @@ public class SwimLane {
     public void setLaneNo(int num){
         lanenum=num;
     }
+    
     public int getLaneNo(){
         return lanenum;
     }

@@ -12,63 +12,59 @@ import java.util.ArrayList;
  * 140345A
  */
 public class SwimmingCompetition {
-    private SwimmingPool pool;
-    private ScoreBoard sbord;
+    
+    public SwimmingPool pool= new SwimmingPool();
+    public ScoreBoard sbord =new ScoreBoard();
     private boolean haspool;
     private boolean hasScorbord;
     private boolean haspavilion;
     
     public SwimmingCompetition(){
+        
         haspool=true;
         hasScorbord=true;
         haspavilion=true;
     }
-    
-    //Arraylist for all human objects
     public static ArrayList<Object> People = new ArrayList<>();
-    //Arraylists for different objects
     public static ArrayList<Swimmer> Swimmers = new ArrayList<>();
-    public static ArrayList<MaleSwimmer> MSwimmers = new ArrayList<>();
-    public static ArrayList<FemaleSwimmer> FSwimmers = new ArrayList<>();
-    public static ArrayList<Judge> Judges = new ArrayList<>();
-    public static ArrayList<SupStaff> SuportStaff = new ArrayList<>();
-    public static ArrayList<Spectator> Spectators = new ArrayList<>();
     
     public void AddMaleSwimmer(String Name){
         MaleSwimmer swimmer= new MaleSwimmer(Name);
-        MSwimmers.add(swimmer);
+        MaleSwimmer.MSwimmers.add(swimmer);
         Swimmers.add(swimmer);
         People.add(swimmer);
     }
     
     public void AddFemaleSwimmer(String Name){
         FemaleSwimmer fswimmer= new FemaleSwimmer(Name);
-        FSwimmers.add(fswimmer);
+        FemaleSwimmer.FSwimmers.add(fswimmer);
         Swimmers.add(fswimmer);
         People.add(fswimmer);
     }
     
     public void AddSpectator(String Name){
         Spectator spec= new Spectator(Name);
-        Spectators.add(spec);
+        Spectator.Spectators.add(spec);
         People.add(spec);
     }
     
     public void AddJudge(String Name){
         Judge jud=new Judge(Name);
-        Judges.add(jud);
+        Judge.Judges.add(jud);
         People.add(jud);
     }
     
     public void AddSupstaff(String Name){
         SupStaff ss=new SupStaff(Name);
-        SuportStaff.add(ss);
+        SupStaff.SuportStaff.add(ss);
         People.add(ss);
     }
     //this will add given number(i) of lanes to swimminpool
     public void Addlanes(int i){
-        for(int x=0;x<i;x++){
+        int x=0;
+        while(x<i){
             pool.addlane(x+1);
+            x++;
         }
     }
     
@@ -84,42 +80,27 @@ public class SwimmingCompetition {
     
     //This will return NumofMaleSwimmers
     public int NumofMaleSwimmers(){
-        return (MSwimmers.toArray().length);
+        return (MaleSwimmer.MSwimmers.toArray().length);
     }
     
     //This will return NumofFemaleSwimmers
     public int NumofFemaleSwimmers(){
-        return (FSwimmers.toArray().length);
+        return (FemaleSwimmer.FSwimmers.toArray().length);
     }
     
     //This will return NumbofJudges
     public int Numofjudges(){
-        return (Judges.toArray().length);
+        return (Judge.Judges.toArray().length);
     }
     
     //This will return NumofSpectators
     public int NumofSpectators(){
-        return (Spectators.toArray().length);
+        return (Spectator.Spectators.toArray().length);
     }
     
     //This will return NumofSupStaff
     public int NumofSuportStaff(){
-        return (SuportStaff.toArray().length);
-    }
-    
-    public static void main(String[] args) {
-       
-        SwimmingCompetition comp1 = new SwimmingCompetition();
-        comp1.AddMaleSwimmer("Ran");
-        comp1.AddFemaleSwimmer("Saj");
-        comp1.AddSpectator("Sam");
-        comp1.AddSupstaff("a");
-        comp1.Addlanes(3);
-        System.out.println(comp1.pool.numoflanes());
-        System.out.println(SwimmingPool.Lanes.get(1).getLaneNo());
-        System.out.println();
-        System.out.println(comp1.NumofPeople());
-        System.out.println(Swimmers.get(1).getName());
-        System.out.println(FSwimmers.get(0).Suitecolor);
+        return (SupStaff.SuportStaff.toArray().length);
     }
 }
+   

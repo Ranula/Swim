@@ -5,12 +5,16 @@
  */
 package swimming;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author RanulaLiyadipita
  */
 public class MaleSwimmer extends Swimmer{
     public final String suitecolor ="Blue";
+    public static ArrayList<MaleSwimmer> MSwimmers = new ArrayList<>();
+    
 
     public MaleSwimmer(String name) {
         super(name);

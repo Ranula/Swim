@@ -23,5 +23,6 @@ public class Main {
         System.out.println(comp1.NumofPeople());
         System.out.println(comp1.Swimmers.get(1).getName());
         System.out.println(FemaleSwimmer.FSwimmers.get(0).Suitecolor);
+        
     }
 }

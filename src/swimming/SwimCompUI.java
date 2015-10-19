@@ -444,21 +444,25 @@ public class SwimCompUI extends javax.swing.JFrame {
         if (comp1.NumofSwimmers()!=0){
             if(comp1.NumofSwimmers()==1){
                 jTextField1.setText(comp1.Swimmers.get(0).getName());
+                System.out.println(SwimmingCompetition.People.toArray().length);
             }
             else if(comp1.NumofSwimmers()==2){
                 jTextField1.setText(comp1.Swimmers.get(0).getName());
                 jTextField2.setText(comp1.Swimmers.get(1).getName());
+                System.out.println(SwimmingCompetition.People.toArray().length);
             }
            else if(comp1.NumofSwimmers()==3){
                 jTextField1.setText(comp1.Swimmers.get(0).getName());
                 jTextField2.setText(comp1.Swimmers.get(1).getName());
                 jTextField3.setText(comp1.Swimmers.get(2).getName());
+                System.out.println(SwimmingCompetition.People.toArray().length);
             }
             else if(comp1.NumofSwimmers()==4){
                 jTextField1.setText(comp1.Swimmers.get(0).getName());
                 jTextField2.setText(comp1.Swimmers.get(1).getName());
                 jTextField3.setText(comp1.Swimmers.get(2).getName());
                 jTextField4.setText(comp1.Swimmers.get(3).getName());
+                System.out.println(SwimmingCompetition.People.toArray().length);
             }
             else if(comp1.NumofSwimmers()==5){
                 jTextField1.setText(comp1.Swimmers.get(0).getName());
@@ -466,6 +470,7 @@ public class SwimCompUI extends javax.swing.JFrame {
                 jTextField3.setText(comp1.Swimmers.get(2).getName());
                 jTextField4.setText(comp1.Swimmers.get(3).getName());
                 jTextField5.setText(comp1.Swimmers.get(4).getName());
+                System.out.println(SwimmingCompetition.People.toArray().length);
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -479,6 +484,7 @@ public class SwimCompUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -501,7 +507,7 @@ public class SwimCompUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SwimCompUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        System.out.println();
+        
         /* Create and display the form */
         
         java.awt.EventQueue.invokeLater(new Runnable() {

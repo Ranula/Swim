@@ -518,7 +518,7 @@ public class SwimCompUI extends javax.swing.JFrame {
         //</editor-fold>
         
         /* Create and display the form */
-        
+        Thread t1 =new Thread((Runnable) SwimmingCompetition.Swimmers.get(0));
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 SwimCompUI s1= new SwimCompUI();
@@ -529,6 +529,7 @@ public class SwimCompUI extends javax.swing.JFrame {
                 s1.jButton2.setVisible(false);
                 SwimmingCompetition comp1 = new SwimmingCompetition();
             }
+            
         });
         
     }

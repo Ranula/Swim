@@ -13,94 +13,93 @@ import java.util.ArrayList;
  */
 public class SwimmingCompetition {
     
-    public SwimmingPool pool= new SwimmingPool();
-    public ScoreBoard sbord =new ScoreBoard();
+    public SwimmingPool pool;
+    public ScoreBoard sbord;
     private boolean haspool;
     private boolean hasScorbord;
     private boolean haspavilion;
+    public static ArrayList<Object> People = new ArrayList<>();
+    public static ArrayList<Swimmer> Swimmers = new ArrayList<>();
+    public static ArrayList<Judge> Judges = new ArrayList<>();
+    public static int numofSpecs;
     
     public SwimmingCompetition(){
         
-        haspool=true;
-        hasScorbord=true;
-        haspavilion=true;
+        this.haspool=true;
+        this.hasScorbord=true;
+        this.haspavilion=true;
     }
-    public static ArrayList<Object> People = new ArrayList<>();
-    public static ArrayList<Swimmer> Swimmers = new ArrayList<>();
     
-    public void AddMaleSwimmer(String Name){
+    
+    public static void AddMaleSwimmer(String Name){
         MaleSwimmer swimmer= new MaleSwimmer(Name);
+        SwimLane l1= new SwimLane(swimmer);
+        SwimmingPool.Lanes.add(l1);
         MaleSwimmer.MSwimmers.add(swimmer);
         Swimmers.add(swimmer);
         People.add(swimmer);
     }
     
-    public void AddFemaleSwimmer(String Name){
+    public static void AddFemaleSwimmer(String Name){
         FemaleSwimmer fswimmer= new FemaleSwimmer(Name);
+        SwimLane l1= new SwimLane(fswimmer);
+        SwimmingPool.Lanes.add(l1);
         FemaleSwimmer.FSwimmers.add(fswimmer);
         Swimmers.add(fswimmer);
         People.add(fswimmer);
     }
     
-    public void AddSpectator(String Name){
+    public static void AddSpectator(String Name){
         Spectator spec= new Spectator(Name);
         Spectator.Spectators.add(spec);
         People.add(spec);
     }
     
-    public void AddJudge(String Name){
+    public static void AddJudge(String Name){
         Judge jud=new Judge(Name);
-        Judge.Judges.add(jud);
+        Judges.add(jud);
         People.add(jud);
     }
     
-    public void AddSupstaff(String Name){
+    public static void AddSupstaff(String Name){
         SupStaff ss=new SupStaff(Name);
         SupStaff.SuportStaff.add(ss);
         People.add(ss);
     }
-    //this will add given number(i) of lanes to swimminpool
-    public void Addlanes(int i){
-        int x=0;
-        while(x<i){
-            pool.addlane(x+1);
-            x++;
-        }
-    }
     
     //This will return NumofPeople
-    public int NumofPeople(){
-        return (People.toArray().length);
+    public static int NumofPeople(){
+        return (People.size());
     }
     
     //This will return NumofSwimmers
-    public int NumofSwimmers(){
-        return (Swimmers.toArray().length);
+    public static int NumofSwimmers(){
+        return (Swimmers.size());
     }
     
     //This will return NumofMaleSwimmers
-    public int NumofMaleSwimmers(){
-        return (MaleSwimmer.MSwimmers.toArray().length);
+    public static int NumofMaleSwimmers(){
+        return (MaleSwimmer.MSwimmers.size());
     }
     
     //This will return NumofFemaleSwimmers
-    public int NumofFemaleSwimmers(){
-        return (FemaleSwimmer.FSwimmers.toArray().length);
+    public static int NumofFemaleSwimmers(){
+        return (FemaleSwimmer.FSwimmers.size());
     }
     
     //This will return NumbofJudges
-    public int Numofjudges(){
-        return (Judge.Judges.toArray().length);
+    public static int Numofjudges(){
+        return (Judges.size());
     }
     
     //This will return NumofSpectators
-    public int NumofSpectators(){
-        return (Spectator.Spectators.toArray().length);
+    public static int NumofSpectators(){
+        return (Spectator.Spectators.size());
     }
     
     //This will return NumofSupStaff
-    public int NumofSuportStaff(){
-        return (SupStaff.SuportStaff.toArray().length);
+    public static int NumofSuportStaff(){
+        return (SupStaff.SuportStaff.size());
     }
 }
    

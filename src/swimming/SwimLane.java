@@ -8,10 +8,15 @@ package swimming;
  *
  * @author RanulaLiyadipita
  */
-public class SwimLane {
-    private TouchPad t1;
-    private int lanenum;
+public class SwimLane  {
+    TouchPad touch1;
+    int lanenum;
+    Swimmer swimer;
+    SwimLane(Swimmer s1){
+        this.swimer= s1;
+    }
     
+
     public void setLaneNo(int num){
         lanenum=num;
     }

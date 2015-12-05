@@ -5,14 +5,16 @@
  */
 package swimming;
 
+import java.util.Random;
+
 /**
  *
  * @author User
  */
-public class Main {
+public class Main  {
      public static void main(String[] args) {
        
-        SwimmingCompetition comp1 = new SwimmingCompetition();
+        /*SwimmingCompetition comp1 = new SwimmingCompetition();
         comp1.AddMaleSwimmer("Ran");
         comp1.AddFemaleSwimmer("Saj");
         comp1.AddSpectator("Sam");
@@ -22,7 +24,14 @@ public class Main {
         System.out.println(comp1.pool.Lanes.get(1).getLaneNo());
         System.out.println(comp1.NumofPeople());
         System.out.println(comp1.Swimmers.get(1).getName());
-        System.out.println(FemaleSwimmer.FSwimmers.get(0).Suitecolor);
+        System.out.println(FemaleSwimmer.FSwimmers.get(0).Suitecolor);*/
+        start add = new start();
+        add.setVisible(true);
+        //AddSwimmer.main(args);
+      
+       
+       ///AddJudge.main(args);
+        
         
     }
 }

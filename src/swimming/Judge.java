@@ -12,14 +12,14 @@ import java.util.ArrayList;
  * @author RanulaLiyadipita
  */
 public class Judge extends Person{
-  public static boolean whistle;
-  public static ArrayList<Judge> Judges = new ArrayList<>();
+  private static boolean whistle;
+  
     public Judge(String name) {
         super(name);
     }
    
     public void blowwhistle(){
-       whistle=setwhistle();
+       this.whistle=setwhistle();
     }
     private boolean setwhistle(){
         return true;

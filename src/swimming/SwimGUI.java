@@ -52,6 +52,8 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,6 +98,8 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tempus Sans ITC", 0, 18)); // NOI18N
         jLabel12.setText("MOST AWAITED SWIMMING COMPETITION");
 
+        jScrollPane1.setViewportView(jTextPane1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,7 +121,10 @@ public class SwimGUI extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(585, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -126,7 +133,9 @@ public class SwimGUI extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addGap(30, 30, 30)
                 .addComponent(jButton1)
-                .addGap(131, 131, 131)
+                .addGap(124, 124, 124)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -140,7 +149,7 @@ public class SwimGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel10))
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,11 +163,11 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel9.setVisible(false);
         jLabel10.setVisible(false);
         Random sleep = new Random();
-        this.lanesarray.get(0).RunLable(jLabel1, sleep.nextInt(10)+1);
-        this.lanesarray.get(1).RunLable(jLabel2, sleep.nextInt(10)+1);   
-        this.lanesarray.get(2).RunLable(jLabel3, sleep.nextInt(10)+1);
-        this.lanesarray.get(3).RunLable(jLabel4, sleep.nextInt(10)+1);
-        this.lanesarray.get(4).RunLable(jLabel5, sleep.nextInt(10)+1);
+        lanesarray.get(0).RunLable(jLabel1, sleep.nextInt(10)+30);
+        lanesarray.get(1).RunLable(jLabel2, sleep.nextInt(10)+30);
+        lanesarray.get(2).RunLable(jLabel3, sleep.nextInt(10)+30);
+        lanesarray.get(3).RunLable(jLabel4, sleep.nextInt(10)+30);
+        lanesarray.get(4).RunLable(jLabel5, sleep.nextInt(10)+30);
         //lanesarray.get(0).swimer.
        
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -229,5 +238,7 @@ public class SwimGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }

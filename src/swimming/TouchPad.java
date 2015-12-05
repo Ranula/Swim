@@ -19,5 +19,8 @@ public class TouchPad {
     public boolean hastouched(){
         return touched;
     }
+    public long time(){
+        return finishtime;
+    }
    
 }

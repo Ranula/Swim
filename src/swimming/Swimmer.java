@@ -5,20 +5,16 @@
  */
 package swimming;
 
-import javax.swing.JLabel;
-
 /**
  *
  * @authorRanulaLiyadipita
  */
-public abstract class Swimmer extends Person implements Runnable  {
+public abstract class Swimmer extends Person  {
    // public static int NumofSwimmers;
     //JLabel SwimLable;
     public  Swimmer(String name) {
         super(name);
     }
-    
-    
     //strokes
     public abstract void butterflystroke();
     public abstract void backstroke();

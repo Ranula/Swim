@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author RanulaLiyadipita
  */
-public class MaleSwimmer extends Swimmer{
+public  class MaleSwimmer extends Swimmer{
     public final String suitecolor ="Blue";
     public static ArrayList<MaleSwimmer> MSwimmers = new ArrayList<>();
     
@@ -60,8 +60,6 @@ public class MaleSwimmer extends Swimmer{
         }
     }
 
-    @Override
-    public void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
+
 }

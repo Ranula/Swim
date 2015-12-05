@@ -10,14 +10,14 @@ package swimming;
  * @author RanulaLiyadipita
  */
 public class TouchPad {
-    private boolean touch = false;
+    private boolean touched = false;
+    long finishtime;
     public void touch(){
-        touch=true;
+        touched=true;
+        finishtime=System.nanoTime();
     }
     public boolean hastouched(){
-        return touch;
+        return touched;
     }
-    public void sendsignal(){
-        
-    }
+   
 }

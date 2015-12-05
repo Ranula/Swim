@@ -154,11 +154,12 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel9.setVisible(false);
         jLabel10.setVisible(false);
         Random sleep = new Random();
-        this.swimaray.get(0).RunLable(jLabel1, sleep.nextInt(10)+1);
-        this.swimaray.get(1).RunLable(jLabel2, sleep.nextInt(10)+1);   
-        this.swimaray.get(2).RunLable(jLabel3, sleep.nextInt(10)+1);
-        this.swimaray.get(3).RunLable(jLabel4, sleep.nextInt(10)+1);
-        this.swimaray.get(4).RunLable(jLabel5, sleep.nextInt(10)+1);
+        this.lanesarray.get(0).RunLable(jLabel1, sleep.nextInt(10)+1);
+        this.lanesarray.get(1).RunLable(jLabel2, sleep.nextInt(10)+1);   
+        this.lanesarray.get(2).RunLable(jLabel3, sleep.nextInt(10)+1);
+        this.lanesarray.get(3).RunLable(jLabel4, sleep.nextInt(10)+1);
+        this.lanesarray.get(4).RunLable(jLabel5, sleep.nextInt(10)+1);
+        //lanesarray.get(0).swimer.
        
     }//GEN-LAST:event_jButton1ActionPerformed
 

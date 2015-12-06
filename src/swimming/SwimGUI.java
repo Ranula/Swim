@@ -260,11 +260,11 @@ public class SwimGUI extends javax.swing.JFrame {
         ScoreBoard.table=jTable1;
         SwimmingCompetition.headjudge.blowwhistle();
         System.out.println("start time "+Judge.starttime());
-        lanesarray.get(0).RunLable(jLabel1, sleep.nextInt(10)+30);
-        lanesarray.get(1).RunLable(jLabel2, sleep.nextInt(10)+30);
-        lanesarray.get(2).RunLable(jLabel3, sleep.nextInt(10)+30);
-        lanesarray.get(3).RunLable(jLabel4, sleep.nextInt(10)+30);
-        lanesarray.get(4).RunLable(jLabel5, sleep.nextInt(10)+30);
+        lanesarray.get(0).RunLable(jLabel1, sleep.nextInt(15)+30);
+        lanesarray.get(1).RunLable(jLabel2, sleep.nextInt(15)+30);
+        lanesarray.get(2).RunLable(jLabel3, sleep.nextInt(15)+30);
+        lanesarray.get(3).RunLable(jLabel4, sleep.nextInt(15)+30);
+        lanesarray.get(4).RunLable(jLabel5, sleep.nextInt(15)+30);
         //lanesarray.get(0).swimer.
        
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -9,6 +9,7 @@ package swimming;
  *
  * @author Student
  */
+
 public class AddSpectator extends javax.swing.JFrame {
 
     /**
@@ -107,12 +108,16 @@ public class AddSpectator extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        int counter=0;
+       try{
        while (counter< Integer.parseInt(jTextField1.getText())){
            counter++;
            SwimmingCompetition.AddSpectator(Integer.toString(counter));
        }
        SwimmingCompetition.numofSpecs = Integer.parseInt(jTextField1.getText());
        jTextField2.setText(SwimmingCompetition.NumofSpectators() +" spetators added.");
+       }catch(NumberFormatException e){
+           jTextField2.setText("Enter a number");
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

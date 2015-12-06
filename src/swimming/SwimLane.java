@@ -6,7 +6,6 @@
 package swimming;
 
 import javax.swing.JLabel;
-import javax.swing.JTable;
 
 /**
  *
@@ -16,7 +15,7 @@ public class SwimLane extends Thread {
     public TouchPad tpad= new TouchPad();
      int lanenum;
     int dist=0;
-    int rank=0;
+    static volatile int rank=0;
     Swimmer swimer;
     //static JTable table ;
     //static SwimGUI cat;
@@ -43,7 +42,7 @@ public class SwimLane extends Thread {
                      }
                      if(lable.getX()==650){
                          SwimLane.this.tpad.touch();
-                         rank++;
+                         rankup();
                          System.out.println("Completed"+SwimLane.this.tpad.time());
                          ScoreBoard.settime(Judge.starttime(),SwimLane.this, ScoreBoard.table);
                          ScoreBoard.setrank(rank, SwimLane.this, ScoreBoard.table);
@@ -67,7 +66,10 @@ public class SwimLane extends Thread {
     public int getLaneNo(){
         return lanenum;
     }
-
+    public  void rankup(){
+        synchronized(this){
+        rank++;}
+    }
     
 
     

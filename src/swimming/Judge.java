@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Judge extends Person{
   private static boolean whistle;
+  private static long starttime;
   
     public Judge(String name) {
         super(name);
@@ -20,8 +21,12 @@ public class Judge extends Person{
    
     public void blowwhistle(){
        this.whistle=setwhistle();
+       this.starttime= System.nanoTime();
     }
     private boolean setwhistle(){
         return true;
+    }
+    public static long starttime(){
+        return starttime;
     }
 }

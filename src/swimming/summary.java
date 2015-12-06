@@ -147,7 +147,7 @@ public class summary extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      SwimGUI swim = new SwimGUI(SwimmingCompetition.Swimmers,SwimmingPool.Lanes);
+      SwimGUI swim = new SwimGUI(SwimmingCompetition.Judges,SwimmingPool.Lanes);
       swim.hider();
       swim.setVisible(true);
       this.dispose();

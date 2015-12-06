@@ -15,9 +15,7 @@ public class SwimmingCompetition {
     
     public SwimmingPool pool;
     public ScoreBoard sbord;
-    private boolean haspool;
-    private boolean hasScorbord;
-    private boolean haspavilion;
+    public static Judge headjudge;
     public static ArrayList<Object> People = new ArrayList<>();
     public static ArrayList<Swimmer> Swimmers = new ArrayList<>();
     public static ArrayList<Judge> Judges = new ArrayList<>();
@@ -25,15 +23,13 @@ public class SwimmingCompetition {
     
     public SwimmingCompetition(){
         
-        this.haspool=true;
-        this.hasScorbord=true;
-        this.haspavilion=true;
     }
     
     
     public static void AddMaleSwimmer(String Name){
         MaleSwimmer swimmer= new MaleSwimmer(Name);
-        SwimLane l1= new SwimLane(swimmer);
+        SwimLane l1= new SwimLane(swimmer,SwimmingPool.Lanes.size());
+        //l1.lanenum=SwimmingPool.Lanes.size();
         SwimmingPool.Lanes.add(l1);
         MaleSwimmer.MSwimmers.add(swimmer);
         Swimmers.add(swimmer);
@@ -42,7 +38,7 @@ public class SwimmingCompetition {
     
     public static void AddFemaleSwimmer(String Name){
         FemaleSwimmer fswimmer= new FemaleSwimmer(Name);
-        SwimLane l1= new SwimLane(fswimmer);
+        SwimLane l1= new SwimLane(fswimmer,SwimmingPool.Lanes.size());
         SwimmingPool.Lanes.add(l1);
         FemaleSwimmer.FSwimmers.add(fswimmer);
         Swimmers.add(fswimmer);

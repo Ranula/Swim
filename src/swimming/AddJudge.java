@@ -161,6 +161,7 @@ public class AddJudge extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (!jTextField1.getText().equals("")){
             SwimmingCompetition.AddJudge(jTextField1.getText());
+            SwimmingCompetition.headjudge=SwimmingCompetition.Judges.get(0);
             jTextField2.setText("Judge Added");
             this.jButton1.setVisible(false);
         }else{

@@ -5,6 +5,7 @@
  */
 package swimming;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -13,7 +14,8 @@ import java.util.Random;
  */
 public class Main  {
      public static void main(String[] args) {
-       
+        //System.out.println(System.nanoTime());
+        //System.out.println(System.nanoTime()/1000000000);
         /*SwimmingCompetition comp1 = new SwimmingCompetition();
         comp1.AddMaleSwimmer("Ran");
         comp1.AddFemaleSwimmer("Saj");
@@ -25,7 +27,7 @@ public class Main  {
         System.out.println(comp1.NumofPeople());
         System.out.println(comp1.Swimmers.get(1).getName());
         System.out.println(FemaleSwimmer.FSwimmers.get(0).Suitecolor);*/
-        start add = new start();
+       start add = new start();
         add.setVisible(true);
         //AddSwimmer.main(args);
       

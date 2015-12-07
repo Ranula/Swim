@@ -31,7 +31,7 @@ public class SwimLane extends Thread {
         new Thread(){
             @Override
             public void run(){
-                System.out.println(lable.getX());
+                //System.out.println(lable.getX());
                 while (lable.getX()<670){
                     //System.out.println(this.getName());
                      if (lable.getX() < current + 650) {

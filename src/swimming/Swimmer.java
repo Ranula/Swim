@@ -5,15 +5,30 @@
  */
 package swimming;
 
+import java.io.Serializable;
+
 /**
  *
  * @authorRanulaLiyadipita
  */
-public abstract class Swimmer extends Person  {
-   // public static int NumofSwimmers;
+public abstract class Swimmer extends Person implements Serializable  {
+   public float finishtime;
+   public int rank;
     //JLabel SwimLable;
     public  Swimmer(String name) {
         super(name);
+    }
+    public  void setrank(int r){
+        this.rank=r;
+    }
+    public int getrank(){
+        return rank;
+    }
+    public void setfinishtime(float t){
+        this.finishtime=t;
+    }
+    public float gettime(){
+        return finishtime;
     }
     //strokes
     public abstract void butterflystroke();

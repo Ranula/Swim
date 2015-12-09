@@ -5,11 +5,13 @@
  */
 package swimming;
 
+import java.io.Serializable;
+
 /**
  *
  * @author RanulaLiyadipita
  */
-public class TouchPad {
+public class TouchPad implements Serializable{
     private boolean touched = false;
     long finishtime;
     public void touch(){

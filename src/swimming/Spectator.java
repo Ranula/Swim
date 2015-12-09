@@ -12,9 +12,11 @@ import java.util.ArrayList;
  * @authorRanulaLiyadipita
  */
 public class Spectator extends Person {
+    //private float time;
     public static ArrayList<Spectator> Spectators = new ArrayList<>();
     public Spectator(String name) {
         super(name);
     }
+    
    
 }

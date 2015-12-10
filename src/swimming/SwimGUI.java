@@ -8,6 +8,8 @@ package swimming;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.JLabel;
+import javax.swing.JTable;
 
 /**
  *
@@ -240,7 +242,7 @@ public class SwimGUI extends javax.swing.JFrame {
                                         .addGap(0, 1, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(4, 4, 4)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel25)
                                             .addComponent(jLabel26))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -297,7 +299,7 @@ public class SwimGUI extends javax.swing.JFrame {
                                 .addGap(44, 44, 44)
                                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
+                                .addGap(43, 43, 43)
                                 .addComponent(jLabel14)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,8 +321,8 @@ public class SwimGUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel9))
                                     .addComponent(jLabel25))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGap(15, 15, 15)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addComponent(jLabel26)))
                             .addGroup(layout.createSequentialGroup()
@@ -484,11 +486,25 @@ public class SwimGUI extends javax.swing.JFrame {
         jLabel4.setVisible(true);
         jLabel5.setVisible(true);
     }
-    public void setTime (long time,int row){
-       
-       jTable1.getModel().setValueAt(time,row , 2);
+    public static void setTime (float time,int row,JTable t1){
+       t1.getModel().setValueAt(time,row,2);
     }
     
+    public static void setranks(int rank,int row,JTable t1){
+       t1.getModel().setValueAt(rank,row,3);
+    }
+    
+    public static void setname(String name,int row,JTable t1){
+       t1.getModel().setValueAt(name,row,1);
+    }
+    
+    public static int getLabelX(JLabel l1){
+        return l1.getX();
+    }
+    public static void setlablenew(JLabel l1){
+        l1.setLocation(l1.getX()+1, l1.getY());
+        l1.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

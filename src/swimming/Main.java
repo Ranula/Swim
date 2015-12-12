@@ -5,6 +5,13 @@
  */
 package swimming;
 
+import swimming.UI.start;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import swimming.UI.summary;
+
 /**
  *
  * @author User
@@ -13,5 +20,8 @@ public class Main  {
      public static void main(String[] args) {
        start add = new start();
        add.setVisible(true);
+        //summary add = new summary();
+       //add.setVisible(true);
+   
     }
 }

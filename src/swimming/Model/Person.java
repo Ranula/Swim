@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 /**
  *
  * @author RanulaLiyadipita
@@ -14,6 +14,7 @@ public abstract class Person   {
     public Person(String name){
         this.Name=name;
     }
+    
     //this will return the name of the person
     public String getName(){
         return Name;

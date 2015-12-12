@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
+import swimming.Model.SwimLane;
 import java.util.ArrayList;
 
 /**
@@ -12,11 +13,10 @@ import java.util.ArrayList;
  * @author RanulaLiyadipita
  */
 public class SwimmingPool {
-    //private int numoflanes;
-    //arraylist to keep track of lanes
-    public static ArrayList<SwimLane> Lanes = new ArrayList<>();
-    
-   
+    private int numoflanes;
+    public static ArrayList<SwimLane> Lanes = new ArrayList<>(); // to store Swimlanes in the swimmingpool
+    public SwimmingPool(){
+    }
     public int numoflanes(){
         return (Lanes.size());
         

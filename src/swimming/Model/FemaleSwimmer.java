@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
 import java.util.ArrayList;
 
@@ -16,50 +16,46 @@ public class FemaleSwimmer extends Swimmer{
     public static ArrayList<FemaleSwimmer> FSwimmers = new ArrayList<>();
     public FemaleSwimmer(String name) {
         super(name);
-        //incrementSwimmers();
     }
+  
     
-    //defining swimming methods for femaleswimmers
-    @Override
-    public void butterflystroke(){
-        while( kick()){
-            breath();
-            pull();
-            push();
-            breath();
-            recover();
-        }
-    }
-    @Override
-    public void backstroke(){
+   @Override
+    public void freestyle() {
         while(kick()){
-            leftarmbakward();
+            moveLeftHand();
             breath();
-            rightarmbakward();
-            breath();
-        }
-        
-    }
-    @Override
-    public void freestyle(){
-        while(kick()){
-            leftarmforward();
-            breath();
-            rightarmforward();
+            moveRightHand();
             breath();
         }
-        
-    }
-    @Override
-    public void breastroke(){
-        while(kick()){
-            breath();
-            glide();
-            outsweep();
-            insweep();
-        }
-        
     }
 
+    @Override
+    public void butterflystroke() {
+        
+        while(true){
+            kick();
+            moveBothHands();
+            breath();
+            kick();
+        }
+    }
+
+    @Override
+    public void backstroke() {
+        while(kick()){
+            moveLeftHand();
+            moveRightHand();
+            breath();
+        }
+    }
+
+    @Override
+    public void breastroke() {
+        while(true){
+            moveBothHands();
+            kick();
+            breath();
+        }
+    }
     
 }

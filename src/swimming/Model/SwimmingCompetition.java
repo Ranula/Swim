@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
+import swimming.Model.SwimLane;
+import swimming.Model.MaleSwimmer;
+import swimming.Model.FemaleSwimmer;
+import swimming.Model.Person;
 import java.util.ArrayList;
 
 /*
@@ -13,19 +17,17 @@ import java.util.ArrayList;
  */
 public class SwimmingCompetition {
     
-    public SwimmingPool pool;
-    public ScoreBoard sbord;
-    public static Judge headjudge;
-    public static ArrayList<Object> People = new ArrayList<>();
+    
+    public static Judge headjudge;// to blow the wistle
+    public static ArrayList<Person> People = new ArrayList<>();
     public static ArrayList<Swimmer> Swimmers = new ArrayList<>();
     public static ArrayList<Judge> Judges = new ArrayList<>();
-    public static int numofSpecs;
     public static String CompType;
     public static String stroke;
     public SwimmingCompetition(){
         
     }
-    public static void Restart(){
+    public static void Restart(){ //will remove the exsisting data from the arraylists
         SwimmingCompetition.Swimmers.clear();
         SwimmingCompetition.Judges.clear();
         SwimmingCompetition.People.clear();
@@ -33,10 +35,9 @@ public class SwimmingCompetition {
         FemaleSwimmer.FSwimmers.clear();
         SupStaff.SuportStaff.clear();
         Spectator.Spectators.clear();
-        SwimLane.rank=0;
     }
     
-    public static void AddMaleSwimmer(String Name){
+    public static void AddMaleSwimmer(String Name){ //swimer and a lane will be created and swimmer will assigned to the lane 
         MaleSwimmer swimmer= new MaleSwimmer(Name);
         SwimLane l1= new SwimLane(swimmer,SwimmingPool.Lanes.size());
         SwimmingPool.Lanes.add(l1);

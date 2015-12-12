@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
+import swimming.Model.Person;
 import java.util.ArrayList;
 
 /**

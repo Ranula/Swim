@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
 import java.util.ArrayList;
 
@@ -19,47 +19,61 @@ public  class MaleSwimmer extends Swimmer{
     public MaleSwimmer(String name) {
         super(name);
     }
+  
     //defining swimming methods for male swimmers
     
+
+    /**
+     *Simulate FreeStyle
+     */
     @Override
-    public void butterflystroke(){
-        while (kick()){
-            pull();
-            breath();
-            push();
-            recover();
-        }
-        
-    }
-    @Override
-    public void backstroke(){
+    public void freestyle() {
         while(kick()){
+            moveRightHand();
             breath();
-            leftarmbakward();
-            rightarmbakward();
-            
-        }
-    }
-    @Override
-    public void freestyle(){
-        while(kick()){
-            breath();
-            leftarmforward();
-            rightarmforward();
-            
-        }
-        
-    }
-    @Override
-    public void breastroke(){
-        while(kick()){
-            glide();
-            outsweep();
-            insweep();
+            moveLeftHand();
             breath();
         }
     }
 
+    /**
+     *Simulate Butterfly Stroke
+     */
+    @Override
+    public void butterflystroke() {
+        
+        while(true){
+            kick();
+            moveBothHands();
+            kick();
+            breath();
+        }
+    }
+
+    /**
+     *Simulate Back Stroke
+     */
+    @Override
+    public void backstroke() {
+        while(kick()){
+            moveRightHand();
+            moveLeftHand();
+            breath();
+        }
+    }
+
+    /**
+     *Simulate Breast Stroke
+     */
+    @Override
+    public void breastroke() {
+        while(true){
+            kick();
+            moveBothHands();
+            breath();
+        }
+    }
+    
  
 
 }

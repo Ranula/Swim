@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
-import java.util.ArrayList;
+import swimming.Model.Person;
 
 /**
  *
@@ -19,9 +19,9 @@ public class Judge extends Person{
         super(name);
     }
    
-    public void blowwhistle(){
-       this.whistle=setwhistle();
-       this.starttime= System.nanoTime();
+    public void blowwhistle(){  //starting signal of the competition and start time will be recorded
+       Judge.whistle=setwhistle();
+       Judge.starttime= System.nanoTime();
     }
     private boolean setwhistle(){
         return true;

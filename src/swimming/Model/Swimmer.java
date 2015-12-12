@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming;
+package swimming.Model;
 
+import swimming.Model.Person;
 import java.io.Serializable;
 
 /**
@@ -12,9 +13,9 @@ import java.io.Serializable;
  * @authorRanulaLiyadipita
  */
 public abstract class Swimmer extends Person implements Serializable  {
-   public float finishtime;
+   private float finishtime;
    public int rank;
-    //JLabel SwimLable;
+ 
     public  Swimmer(String name) {
         super(name);
     }
@@ -36,38 +37,39 @@ public abstract class Swimmer extends Person implements Serializable  {
     public abstract void freestyle();
     public abstract void breastroke();
     
-//swimmingMoves
-    
-    protected void breath(){
-    }
-    protected boolean kick(){
+    /**
+     * Simulate Kick
+     * @return
+     */
+    public boolean kick(){
         return true;
     }
     
- //butterflystroke moves
-    protected void pull(){
-    }
-    protected void push(){
-    }
-    protected void recover(){
+    /**
+     *Simulate Left hand Movement
+     */
+    public void moveLeftHand(){
+        
     }
     
-//freestyle & backstroke moves
+    /**
+     *Simulate Right hand Movement
+     */
+    public void moveRightHand(){
+        
+    }
     
-    protected void rightarmforward(){
+    /**
+     *Simulate Left and Right hand Movement at the Same time
+     */
+    public void moveBothHands(){
+        
     }
-    protected void leftarmforward(){
-    } 
-    protected void rightarmbakward(){
-    }
-    protected void leftarmbakward(){
-    }    
     
-//breaststroke moves
-    protected void glide(){
-    }
-    protected void outsweep(){
-    } 
-    protected void insweep(){
+    /**
+     *Simulate Breath
+     */
+    public void breath(){
+        
     }
 }

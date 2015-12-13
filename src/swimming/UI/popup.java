@@ -17,7 +17,7 @@ public class popup extends javax.swing.JFrame {
      * Creates new form popup
      */
     public popup() {
-        this.getContentPane().setBackground(Color.white);
+        this.getContentPane().setBackground(Color.getHSBColor(123,104,238));
         initComponents();
     }
 
@@ -52,21 +52,21 @@ public class popup extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(108, 108, 108)
                 .addComponent(jButton1)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(39, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(39, 39, 39)
+                .addGap(43, 43, 43)
                 .addComponent(jButton1)
-                .addGap(28, 28, 28))
+                .addGap(24, 24, 24))
         );
 
         pack();

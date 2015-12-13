@@ -5,6 +5,7 @@
  */
 package swimming.UI;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import swimming.Model.Swimmer;
 import swimming.control.SwimmingCompetition;
@@ -19,6 +20,7 @@ public class PrevResult extends javax.swing.JFrame {
      * Creates new form PrevResult
      */
     public PrevResult() {
+        this.getContentPane().setBackground(Color.getHSBColor(123,104,238));
         initComponents();
     }
 

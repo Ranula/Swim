@@ -28,7 +28,7 @@ public class SwimLane extends Thread implements Serializable {
     }
    
     
-    public void RunLable(final JLabel lable,final int val){// this method will move labels on the GUI
+    public void RunLable(final JLabel lable,final int speed){// this method will move labels on the GUI
        
         new Thread(){
             @Override
@@ -47,7 +47,7 @@ public class SwimLane extends Thread implements Serializable {
                          }
                      }
                      try{
-                         Thread.sleep(val);
+                         Thread.sleep(speed);
                      }catch(InterruptedException ex){
                      }
                 }

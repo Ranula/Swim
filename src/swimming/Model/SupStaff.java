@@ -13,9 +13,13 @@ import java.util.ArrayList;
  * @authorRanulaLiyadipita
  */
 public class SupStaff extends Person {
+    private static ArrayList<SwimLane> finall;
     public static ArrayList<SupStaff> SuportStaff = new ArrayList<>();
     public SupStaff(String name) {
         super(name);
+    }public static void getfinalresult(ArrayList<SwimLane> b){
+       SupStaff.finall=b;
+       System.out.println("Support staff recieved final result");
     }
    
 }

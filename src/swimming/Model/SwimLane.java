@@ -5,8 +5,6 @@
  */
 package swimming.Model;
 
-import swimming.Model.ScoreBoard;
-import swimming.Model.TouchPad;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -24,7 +22,7 @@ public class SwimLane extends Thread implements Serializable {
     private int lanenum;         
     protected Swimmer swimer;  //swimlane should contain aswimmer
     
-    SwimLane(Swimmer s1,int a){
+   public SwimLane(Swimmer s1,int a){
         this.swimer= s1;
         this.lanenum=a;
     }
@@ -39,12 +37,13 @@ public class SwimLane extends Thread implements Serializable {
                 while (SwimGUI.getLabelX(lable)<651){
                         SwimGUI.setlablenew(lable);
                         ScoreBoard.setcurenttime(Judge.starttime(), SwimLane.this, ScoreBoard.table);
-                     synchronized(this){ // to avoid thread interference while updating the score board
+                     synchronized(SwimLane.this){ // to avoid thread interference while updating the score board
                         if(SwimGUI.getLabelX(lable)==650){
                          SwimLane.this.tpad.touch();
                          SwimLane.this.swimer.setfinishtime(ScoreBoard.time(Judge.starttime(), SwimLane.this));
                          ScoreBoard.settime(Judge.starttime(),SwimLane.this, ScoreBoard.table);
                          System.out.println("Completed"+SwimLane.this.tpad.finishtime());
+                         Thread.currentThread().stop();
                          }
                      }
                      try{
@@ -63,17 +62,10 @@ public class SwimLane extends Thread implements Serializable {
     public int getLaneNo(){
         return lanenum;
     }
-  
     
-public static void save(ArrayList<SwimLane> a) { // saving the object array list with the result
-        try{
-            try (FileOutputStream fileOut = new FileOutputStream("Result"+Long.toString(System.nanoTime())+".ser"); ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
-                out.writeObject(a);
-            }
-         System.out.printf("Serialized data is saved in Result############.ser");
-      }catch(IOException i)
-      {
-      }
-}  
+ 
+   
+    
+
     
 }

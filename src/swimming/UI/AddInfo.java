@@ -6,7 +6,7 @@
 package swimming.UI;
 
 
-import swimming.Model.SwimmingCompetition;
+import swimming.control.SwimmingCompetition;
 import java.awt.Color;
 
 /**

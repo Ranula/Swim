@@ -5,8 +5,13 @@
  */
 package swimming.Model;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import swimming.Model.Person;
 import java.io.Serializable;
+import java.util.ArrayList;
+import swimming.control.SwimmingCompetition;
 
 /**
  *
@@ -37,6 +42,17 @@ public abstract class Swimmer extends Person implements Serializable  {
     public abstract void freestyle();
     public abstract void breastroke();
     
+  public static void save(ArrayList<Swimmer> a) { // saving the object array list with the result
+      //String time =Long.toString(System.nanoTime());
+      SwimmingCompetition.compnum++;
+        try{
+            try (FileOutputStream fileOut = new FileOutputStream("Result"+Integer.toString(SwimmingCompetition.compnum)+".ser"); ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
+                out.writeObject(a);
+            }
+         System.out.printf("Serialized data is saved in Result############.ser");
+      }catch(IOException i)
+      {
+      } }
     /**
      * Simulate Kick
      * @return

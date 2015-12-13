@@ -5,8 +5,6 @@
  */
 package swimming.Model;
 
-import swimming.Model.SwimLane;
-import swimming.Model.Person;
 import java.util.ArrayList;
 
 /**
@@ -15,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Spectator extends Person{
     protected float curenttime;
+    protected int rank;
     public static ArrayList<Spectator> Spectators = new ArrayList<>();
     public Spectator(String name) {
         super(name);
@@ -22,7 +21,13 @@ public class Spectator extends Person{
     public void update(float a,SwimLane l){
         this.curenttime=a;
         System.out.println(this.getName()+
-                " i know the time");
+                " i know the current time of lane " + l.getLaneNo());
+    }
+    
+    public void update(int a,SwimLane l){
+        this.rank=a;
+        System.out.println(this.getName()+
+                " i know the swimmer "+l.swimer.getName()+" in " + l.getLaneNo()+1+" took the "+ a+" place");
     }
 
    

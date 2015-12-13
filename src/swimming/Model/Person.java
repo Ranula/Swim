@@ -4,11 +4,14 @@
  * and open the template in the editor.
  */
 package swimming.Model;
+
+import java.io.Serializable;
+
 /**
  *
  * @author RanulaLiyadipita
  */
-public abstract class Person   {
+public abstract class Person implements Serializable {
     private final String Name;
     
     public Person(String name){

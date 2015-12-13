@@ -3,13 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package swimming.Model;
+package swimming.control;
 
-import swimming.Model.SwimLane;
-import swimming.Model.MaleSwimmer;
-import swimming.Model.FemaleSwimmer;
-import swimming.Model.Person;
 import java.util.ArrayList;
+import swimming.Model.FemaleSwimmer;
+import swimming.Model.Judge;
+import swimming.Model.MaleSwimmer;
+import swimming.Model.Person;
+import swimming.Model.Spectator;
+import swimming.Model.SupStaff;
+import swimming.Model.SwimLane;
+import swimming.Model.Swimmer;
+import swimming.Model.SwimmingPool;
 
 /*
  * @author RanulaLiyadipita
@@ -24,6 +29,7 @@ public class SwimmingCompetition {
     public static ArrayList<Judge> Judges = new ArrayList<>();
     public static String CompType;
     public static String stroke;
+    public static int compnum=0;
     public SwimmingCompetition(){
         
     }
@@ -35,6 +41,8 @@ public class SwimmingCompetition {
         FemaleSwimmer.FSwimmers.clear();
         SupStaff.SuportStaff.clear();
         Spectator.Spectators.clear();
+        SwimmingPool.Lanes.clear();
+        compnum=0;
     }
     
     public static void AddMaleSwimmer(String Name){ //swimer and a lane will be created and swimmer will assigned to the lane 

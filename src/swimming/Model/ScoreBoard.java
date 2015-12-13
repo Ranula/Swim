@@ -67,7 +67,7 @@ public class ScoreBoard   {
         float g= (float)d;
         float finaly =(f/g);
         SwimGUI.setTime(finaly,l1.getLaneNo(), table);
-        notifyObservers(Spectator.Spectators,finaly,l1);
+        notifyObservers(Spectator.Spectators,finaly,l1); // notifying observers current time of each lane
         }else{
             System.out.println("TimeError");
         }
@@ -78,24 +78,33 @@ public class ScoreBoard   {
             s.update(e,l);
         }
     }
+     public static void notifyObserversrank(ArrayList<Spectator> a,int e,SwimLane l){// all the spectators will know the current time of each swimmer
+        for (Spectator s:a){
+            s.update(e,l);
+        }
+    }
     
-    public static void letssortnprint(ArrayList<SwimLane> a){ //method to print the places
+    public static void settingranks(ArrayList<SwimLane> a){ //method to print the places and notify Judges and supportstaff
         int r=1;
         float[] f = new float[a.size()];
         for(int y=0;y<a.size();y++){
         f[y]=a.get(y).swimer.gettime();
                }
         Arrays.sort(f);                                         //sorting the finishtimes
+        
         for(float e: f){
             for(SwimLane q : a){                                //comparing the first sorted value with its according lane num
                 if(q.swimer.gettime()==e){
                     q.swimer.rank=r;
                     setrank(r, q,ScoreBoard.table);
+                    notifyObserversrank(Spectator.Spectators,r,q);  //notify observers the rank
                     r++;
                     break;
                 }
             }
         }
+        Judge.getfinalresult(a);  // giving final arraylist with ranks to the Judges
+        SupStaff.getfinalresult(a);// giving final arraylist with ranks to the SupStaff
     }
     
 }

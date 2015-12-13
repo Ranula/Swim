@@ -5,7 +5,7 @@
  */
 package swimming.Model;
 
-import swimming.Model.Person;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,6 +14,7 @@ import swimming.Model.Person;
 public class Judge extends Person{
   private static boolean whistle;
   private static long starttime;
+  private static ArrayList<SwimLane> finall;
   
     public Judge(String name) {
         super(name);
@@ -28,5 +29,9 @@ public class Judge extends Person{
     }
     public static long starttime(){
         return starttime;
+    }
+    public static void getfinalresult(ArrayList<SwimLane> b){
+        Judge.finall=b;
+        System.out.println("Judge recieved final result");
     }
 }

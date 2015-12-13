@@ -8,7 +8,7 @@ package swimming.UI;
 
 import swimming.UI.SwimGUI;
 import swimming.Model.SwimmingPool;
-import swimming.Model.SwimmingCompetition;
+import swimming.control.SwimmingCompetition;
 import swimming.Model.MaleSwimmer;
 import java.awt.Color;
 
